@@ -10,3 +10,12 @@ def run():
     print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"]) # and find named entities, phrases and concepts
     for entity in doc.ents:
             print(entity.text, entity.label_)
+
+            #TODO- After named entity recognition, update the fiels in the db
+            # from entrec.models import Document
+            # from entrec.models import Text
+            # t_raw_body = Text(text_content = entity.text)
+            # t_raw_body.save()
+            # Note that this is not a safe usage and recommended approach to 
+            # saving values to the db and defeats the purpose of the app. However,
+            # this can be used for testing purpose.
