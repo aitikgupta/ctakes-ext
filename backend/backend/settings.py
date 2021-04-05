@@ -21,9 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 try:  
   SECRET_KEY = os.environ["MLHFS2_DJANGO_SECRET"]
 except KeyError: 
-   print "Environment variable MLHFS2_DJANGO_SECRET can not be NULL type"
-   sys.exit(1)
-
+   print("Environment variable MLHFS2_DJANGO_SECRET can not be NULL type")
+#sys.exit(1)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
