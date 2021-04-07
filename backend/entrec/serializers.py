@@ -3,8 +3,8 @@ from entrec.models import Document
 
 class EntRecSerializer(serializers.Serializer):
     # serializers for Web API
-    Document.id = serializers.IntegerField(read_only=true)
-    Document.document_name = serializers.CharField(required=True, allow_blank=False, max_length=50)
+    Document.id = serializers.IntegerField(read_only=True)
+    Document.document_name = serializers.CharField(allow_blank=False, max_length=50)
     Document.submission_date = serializers.DateField()
     Document.submission_time = serializers.TimeField()
 
