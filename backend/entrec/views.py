@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework import viewsets
+from entrec.models import Text
 from entrec.serializers import TextSerializer
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser
@@ -15,3 +16,9 @@ def text_list(request):
             text_serializer.save()
             return JsonResponse(text_serializer.data, status=status.HTTP_201_CREATED)
         return JsonResponse(text_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    if request.method == 'GET':
+        text = Text.objects.all()
+        text_data = request_params.get('text_content', None)
+        text_serializer = TextSerializer(text, many=True)
+        return JsonResponse(text_serializer.data, safe=Flase)
+
