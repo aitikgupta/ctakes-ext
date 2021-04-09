@@ -19,7 +19,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 try:  
-  SECRET_KEY = os.environ["MLHFS2_DJANGO_SECRET"]
+   SECRET_KEY = os.environ["MLHFS2_DJANGO_SECRET"]
+    
 except KeyError: 
    print("Environment variable MLHFS2_DJANGO_SECRET can not be NULL type")
 #sys.exit(1)
@@ -33,6 +34,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'entrec.apps.EntrecConfig',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
