@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from entrec.models import Text
 from entrec.serializers import TextSerializer
 from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser

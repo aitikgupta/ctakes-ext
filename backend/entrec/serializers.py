@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from entrec.models import Document, Text, Information
+from entrec.models import Text
 
 class TextSerializer(serializers.ModelSerializer):
     # serializers for Web API
