@@ -1,8 +1,13 @@
 from rest_framework import serializers
+<<<<<<< HEAD
 from entrec.models import Document
+=======
+from entrec.models import Text
+>>>>>>> 1a5231400c4f94e46b4da242301a88bf6a4a73d2
 
-class EntRecSerializer(serializers.Serializer):
+class TextSerializer(serializers.ModelSerializer):
     # serializers for Web API
+<<<<<<< HEAD
     Document.id = serializers.IntegerField(read_only=True)
     Document.document_name = serializers.CharField(allow_blank=False, max_length=50)
     Document.submission_date = serializers.DateField()
@@ -24,3 +29,8 @@ class EntRecSerializer(serializers.Serializer):
         instance.document_name = validated_data.get('document date submitted', instance.document_name)
         instance.save()
         return instance
+=======
+    class Meta: 
+        model = Text
+        fields = ['text_content']
+>>>>>>> 1a5231400c4f94e46b4da242301a88bf6a4a73d2
