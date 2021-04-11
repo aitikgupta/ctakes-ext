@@ -23,7 +23,7 @@ SECRET_KEY = '%1d&7x&_e^b1%3=^ag6^)lx9#1jc7+(fsncmrdedx5-7mdj1_n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://edice-ner.herokuapp.com/']
 
 
 # Application definition
