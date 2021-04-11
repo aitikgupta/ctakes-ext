@@ -7,7 +7,7 @@ from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
 from rest_framework import status
 
-@api_view(['POST'])
+@api_view(['GET', 'POST'])
 def text_list(request):
     if request.method == 'POST':
         text_data = JSONParser().parse(request)
@@ -18,7 +18,7 @@ def text_list(request):
         return JsonResponse(text_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     if request.method == 'GET':
         text = Text.objects.all()
-        text_data = request_params.get('text_content', None)
         text_serializer = TextSerializer(text, many=True)
-        return JsonResponse(text_serializer.data, safe=Flase)
+        return JsonResponse(text_serializer.data, safe=False)
+ 
 
