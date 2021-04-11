@@ -22,13 +22,9 @@ const Index = () => {
             display="flex"
             flexDirection="column"
             border="default">
-            <Heading size={600}>Title Report</Heading>
+            <Heading size={600}>Emergency Report</Heading>
             <Text size={400} marginTop="8px">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a type specimen
-                book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchan
+            In July 93 a Thai fourteen-year-old female Ms. Owl age very small was admitted to the emergency room of the Ramathibodi‟sHospital with suspicion of Multiple sclerosis treated by Dr Doge . Two months before she had presented with horizontal diplopia, diffuse headache and dorsal neck pain.The result of an eye examination at Chumpon‟s Hospital was normal
             </Text>
             <Heading size={300} marginTop={8} color="blue">26 May 2021</Heading>
 

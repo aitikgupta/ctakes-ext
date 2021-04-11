@@ -30,7 +30,6 @@ const Index = () => {
                 <Pane>
                     <Card/>
                     <Card/>
-                    <Card/>
                 </Pane>
 
             </Pane>

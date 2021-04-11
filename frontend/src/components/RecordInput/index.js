@@ -43,6 +43,7 @@ const Index = () => {
                         <Label htmlFor="textarea-2" marginBottom={4} display="block">
                             Patient summary
                         </Label>
+                        {!toggle?
                         <Textarea
                             width={594}
                             height={200}
@@ -50,6 +51,21 @@ const Index = () => {
                             placeholder="Textarea placeholder... "
                             onChange={e => setValue(e.target.value)}
                             value={value}/>
+                            :
+                        <Pane  width={594}>
+                            <Text  size={500} marginTop="8px">
+                                In July 93 a Thai fourteen-year-old female
+                                <Heading size={500} display="inline" color="blue"> Ms. Owl </Heading>
+                                age <Heading size={500} display="inline" color="blue">
+                                     very small </Heading>
+                                  was admitted to the emergency room of the Ramathibodi‟sHospital with suspicion
+                                of Multiple sclerosis treated by 
+                                <Heading size={500} display="inline" color="blue"> Dr Doge </Heading>. Two months
+                                before she had presented with horizontal diplopia, diffuse headache and dorsal
+                                neck pain.The result of an eye examination at Chumpon‟s Hospital was normal
+                            </Text>
+                        </Pane>
+                        }
                     </Pane>
 
                     <Pane margin={16}>
