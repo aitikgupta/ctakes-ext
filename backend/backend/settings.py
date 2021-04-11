@@ -18,11 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-try:  
-   SECRET_KEY = os.environ["MLHFS2_DJANGO_SECRET"]
-    
-except KeyError: 
-   print("Environment variable MLHFS2_DJANGO_SECRET can not be NULL type")
+SECRET_KEY = '%1d&7x&_e^b1%3=^ag6^)lx9#1jc7+(fsncmrdedx5-7mdj1_n'
 #sys.exit(1)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -33,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'entrec.apps.EntrecConfig',
     'rest_framework',
     'django.contrib.admin',
@@ -44,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -128,3 +126,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '../frontend/build/static'),
 ]
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
