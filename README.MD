@@ -43,6 +43,12 @@ Make sure to Fork this repository into your account before making any commits. T
 # clone the repository to the local directory
 git clone https://github.com/<your-github-username>/ctakes-ext
 
+```
+
+## Backend setup
+
+```bash
+
 # Run the backend
 cd backend 
 pip install -r requirements-dev.txt
@@ -53,6 +59,17 @@ docker-compose build
 docker-compose up
 
 ```
+
+## Frontend setup
+
+```bash
+
+#Swich to branch frontend
+cd frontend
+npm install
+
+```
+
 
 <h2 align="center" style="font-weight:bold" id="contributing">Project Demo</h2>
 
