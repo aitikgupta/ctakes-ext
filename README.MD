@@ -40,7 +40,7 @@ Make sure to Fork this repository into your account before making any commits. T
 <h3 style="font-weight:bold">Setup Development environment</h3>
 
 ```bash
-# clone the repository to the local directory
+#Fork & clone the repository to the local directory
 git clone https://github.com/<your-github-username>/ctakes-ext
 
 ```
