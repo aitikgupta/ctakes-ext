@@ -51,7 +51,7 @@ git clone https://github.com/<your-github-username>/ctakes-ext
 
 # Run the backend
 cd backend 
-pip install -r requirements-dev.txt
+pip install -r requirements.txt
 python3 manage.py runserver
 
 #Run using Docker
